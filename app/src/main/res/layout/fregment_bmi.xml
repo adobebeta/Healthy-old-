@@ -13,22 +13,23 @@
         android:padding="50dp">
 
     <EditText
-        android:text="@string/height"
+        android:hint="@string/height"
         android:drawableLeft="@drawable/ic_height"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/bmi_height" />
 
     <EditText
-        android:text="@string/weight"
-        android:drawableLeft="@drawable/ic_weight"
+        android:hint="@string/weight"
+        android:drawableLeft="@drawable/ic_height"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:id="@+id/bmi_weight" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_cal"/>
+        android:text="@string/btn_cal"
+        android:id="@+id/bmi_calculate_btn"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -41,9 +42,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="26.55"
+            android:hint="0"
             android:gravity="center"
-            android:textSize="30dp"/>
+            android:textSize="30dp"
+            android:id="@+id/bmi_bmishow"      />
 
     </LinearLayout>
 </ScrollView>

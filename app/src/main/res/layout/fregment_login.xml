@@ -29,6 +29,7 @@
         android:drawableLeft="@drawable/ic_action_name"
         android:layout_marginTop="15dp"
         android:hint="@string/user_id"
+        android:id="@+id/login_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
@@ -38,6 +39,7 @@
         android:drawableLeft="@drawable/ic_password"
         android:layout_marginTop="15dp"
         android:hint="@string/password"
+        android:id="@+id/login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -49,7 +51,7 @@
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:id="@+id/login_login_btn"
         android:layout_weight="0.05" />
 
     <TextView
@@ -58,8 +60,10 @@
         android:text= "@string/btn_register"
         android:layout_gravity="right"
         android:textColor="@color/colorPrimary"
-        android:id="@+id/textView"
-        android:layout_marginTop="15dp"/>
+        android:id="@+id/register_textview"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:onClick="onClick"/>
 
     </LinearLayout>
     </ScrollView>
