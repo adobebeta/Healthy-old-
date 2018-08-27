@@ -12,7 +12,20 @@
         android:orientation="vertical"
         android:padding="50dp">
 
-    <EditText
+        <TextView
+            android:drawableLeft="@drawable/ic_action_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= ""
+            android:layout_gravity="left"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/bmi_backBtn"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:paddingBottom="40dp"/>
+
+        <EditText
         android:hint="@string/height"
         android:drawableLeft="@drawable/ic_height"
         android:layout_width="match_parent"

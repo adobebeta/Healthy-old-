@@ -1,4 +1,4 @@
-package com.example.a59070090.healthy;
+package com.example.a59070090.healthy.View;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.example.a59070090.healthy.R;
 
 public class LoginFragment extends Fragment {
     @Nullable
@@ -46,7 +46,7 @@ public class LoginFragment extends Fragment {
                 }
                 else if (_userIdStr.equals("admin") && _passwordStr.equals("admin")){ //correct
                     Log.d("USER","GOTO BMI");
-                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_view, new BmiFragment()).addToBackStack(null).commit();
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_view, new MenuFragment()).addToBackStack(null).commit();
                 }
                 else{ //incorrect
                     Log.d("USER","INVALID USERNAME OR PASSWORD");

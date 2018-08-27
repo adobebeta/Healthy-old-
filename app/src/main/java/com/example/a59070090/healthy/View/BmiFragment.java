@@ -1,4 +1,4 @@
-package com.example.a59070090.healthy;
+package com.example.a59070090.healthy.View;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.example.a59070090.healthy.R;
 
 public class BmiFragment extends Fragment {
     @Nullable
@@ -25,6 +25,7 @@ public class BmiFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initCalculate();
+        initBackBtn();
     }
 
     void initCalculate(){
@@ -53,6 +54,17 @@ public class BmiFragment extends Fragment {
                     _bmi.setText(bmiStr);
                 }
             }
+        });
+    }
+
+    void initBackBtn(){
+        TextView _backBtn = (TextView) getView().findViewById(R.id.bmi_backBtn);
+        _backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_view, new MenuFragment()).addToBackStack(null).commit();
+            }
+
         });
     }
 }
